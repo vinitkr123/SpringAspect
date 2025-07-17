@@ -28,5 +28,28 @@
         </includes>
       </resource>
     </resources>
-  </build>
+
+      <plugins>
+        <plugin>
+          <groupId>org.codehaus.mojo</groupId>
+          <artifactId>aspectj-maven-plugin</artifactId>
+          <version>1.14.0</version>
+          <configuration>
+            <complianceLevel>21</complianceLevel>
+            <source>1.8</source>
+            <target>1.8</target>
+            <showWeaveInfo>true</showWeaveInfo>
+          </configuration>
+          <executions>
+            <execution>
+              <goals>
+                <goal>compile</goal>
+              </goals>
+            </execution>
+          </executions>
+        </plugin>
+      </plugins>
+    </build>
+
+
 </project>
